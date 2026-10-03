@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achille Rumolo — Export & International Business Development</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#ffffff;--bg2:#f5f5f3;--bg3:#eeede9;
+  --text:#1a1a1a;--text2:#666;--text3:#999;
+  --border:rgba(0,0,0,0.12);--border2:rgba(0,0,0,0.22);
+  --red:#1B4E8E;--blue:#3B82C4;--navy:#0D1B2A;
+  --r:4px;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+code{font-size:11px;background:var(--bg2);padding:1px 5px;border-radius:3px;}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:var(--bg);display:flex;justify-content:space-between;align-items:center;padding:.9rem 2.5rem;border-bottom:.5px solid var(--border);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;}
+.nav-links{display:flex;gap:1.4rem;list-style:none;}
+.nav-links a{font-size:12px;color:var(--text2);cursor:pointer;letter-spacing:.3px;transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+
+/* HERO */
+.hero{position:relative;padding:4rem 2.5rem 3.5rem;min-height:420px;display:flex;align-items:flex-end;overflow:hidden;}
+.h-blob1{position:absolute;top:-80px;right:-80px;width:520px;height:520px;border-radius:50%;background:#1B4E8E;opacity:.09;}
+.h-blob2{position:absolute;top:80px;right:130px;width:230px;height:230px;border-radius:50%;background:#3B82C4;opacity:.06;}
+.h-bar{position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1B4E8E,#0A2444);}
+.hero-content{position:relative;z-index:1;max-width:700px;}
+.hero-tag{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:4px 13px;border-radius:2px;margin-bottom:1.2rem;}
+.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:84px;line-height:.91;letter-spacing:1px;margin-bottom:1.3rem;}
+.hero-h1 em{color:var(--red);font-style:normal;}
+.hero-p{font-size:14px;color:var(--text2);max-width:540px;line-height:1.8;margin-bottom:2rem;}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;background:var(--text);color:var(--bg);font-size:13px;font-weight:500;padding:12px 24px;border-radius:3px;cursor:pointer;transition:opacity .2s;}
+.hero-cta:hover{opacity:.82;}
+.hero-stats{position:absolute;right:2.5rem;bottom:3rem;z-index:1;display:flex;flex-direction:column;gap:12px;text-align:right;}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:46px;line-height:1;}
+.stat-l{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);}
+
+/* TICKER */
+.ticker{overflow:hidden;border-top:.5px solid var(--border);border-bottom:.5px solid var(--border);padding:10px 0;}
+.ticker-inner{display:flex;gap:2.5rem;animation:scroll 28s linear infinite;white-space:nowrap;}
+.ticker-inner span{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:var(--text2);}
+.ticker-inner .dot{color:var(--red);}
+@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* COMMON */
+.sec{padding:2.8rem 2.5rem;}
+.sec-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);font-weight:500;margin-bottom:.4rem;}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:1px;margin-bottom:1.8rem;}
+.divider{border-top:.5px solid var(--border);}
+
+/* EXPERTISE STRIP (top) */
+.expertise-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:.5px solid var(--border);}
+.exp-item{padding:1.2rem 1.5rem;border-right:.5px solid var(--border);}
+.exp-item:last-child{border-right:none;}
+.exp-num{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--red);line-height:1;margin-bottom:.3rem;}
+.exp-label{font-size:11px;color:var(--text2);letter-spacing:.3px;line-height:1.4;}
+
+/* INDUSTRY */
+.industry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:.5px solid var(--border);}
+.ind-card{background:var(--bg);padding:1.3rem 1.1rem;transition:background .2s;}
+.ind-card:hover{background:var(--bg2);}
+.ind-icon{font-size:22px;margin-bottom:.6rem;color:var(--text);}
+.ind-name{font-size:13px;font-weight:500;margin-bottom:.5rem;}
+.ind-cats{display:flex;flex-wrap:wrap;gap:4px;margin-top:.4rem;}
+.ind-cat{font-size:10px;padding:2px 7px;border-radius:2px;border:.5px solid var(--border2);color:var(--text2);}
+.ind-cat.hot{border-color:var(--red);color:var(--red);}
+.ind-cat.blue{border-color:var(--blue);color:var(--blue);}
+
+/* SERVICES */
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:.5px solid var(--border);}
+.srv-card{background:var(--bg);padding:1.6rem 1.4rem;transition:background .2s;}
+.srv-card:hover{background:var(--bg2);}
+.srv-num{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--border2);line-height:1;margin-bottom:.8rem;}
+.srv-name{font-size:13px;font-weight:500;margin-bottom:.5rem;}
+.srv-desc{font-size:12px;color:var(--text2);line-height:1.7;}
+.srv-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:.8rem;}
+.srv-tag{font-size:10px;padding:2px 7px;border-radius:2px;border:.5px solid var(--border);color:var(--text2);}
+.srv-tag.accent{border-color:var(--red);color:var(--red);}
+
+/* TENDER SECTION */
+.tender-layout{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem;}
+.tender-card{background:var(--bg);border:.5px solid var(--border2);border-radius:var(--r);padding:1.4rem;}
+.tender-card.featured{border-color:var(--red);border-width:1.5px;}
+.tender-badge{display:inline-block;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:2px;margin-bottom:.7rem;font-weight:500;}
+.tb-red{background:#1B4E8E18;color:var(--red);}
+.tb-blue{background:#1A1AFF18;color:var(--blue);}
+.tb-gray{background:var(--bg2);color:var(--text2);}
+.tender-title{font-size:13px;font-weight:500;margin-bottom:.5rem;line-height:1.35;}
+.tender-desc{font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:.8rem;}
+.tender-list{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.tender-list li{font-size:11px;color:var(--text2);display:flex;align-items:flex-start;gap:6px;}
+.tender-list li::before{content:"→";color:var(--red);flex-shrink:0;}
+
+/* VOUCHER */
+.voucher-sec{background:var(--bg2);border-top:.5px solid var(--border);border-bottom:.5px solid var(--border);padding:2.8rem 2.5rem;}
+.voucher-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;margin-top:1.5rem;}
+.voucher-card{background:var(--bg);border:.5px solid var(--border2);border-radius:var(--r);padding:1.4rem;}
+.voucher-badge{display:inline-block;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:.8rem;font-weight:500;}
+.badge-eu{background:#1A3AFF18;color:var(--blue);}
+.badge-gov{background:#1B4E8E18;color:var(--red);}
+.voucher-title{font-size:13px;font-weight:500;margin-bottom:.5rem;}
+.voucher-desc{font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:.8rem;}
+.voucher-list{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.voucher-list li{font-size:11px;color:var(--text2);display:flex;align-items:flex-start;gap:6px;}
+.voucher-list li::before{content:"→";color:var(--red);flex-shrink:0;}
+
+/* CASE STUDIES */
+.cases-tabs{display:flex;gap:0;border:.5px solid var(--border2);border-radius:3px;overflow:hidden;margin-bottom:1.6rem;flex-wrap:wrap;}
+.case-tab{font-size:11px;padding:7px 14px;cursor:pointer;color:var(--text2);background:var(--bg);border-right:.5px solid var(--border);transition:all .2s;letter-spacing:.3px;}
+.case-tab:last-child{border-right:none;}
+.case-tab.active{background:var(--text);color:var(--bg);}
+.case-tab:hover:not(.active){background:var(--bg2);}
+.cases-panel{display:none;}
+.cases-panel.active{display:block;}
+.case-card{border:.5px solid var(--border2);border-radius:var(--r);padding:1.6rem;margin-bottom:1rem;}
+.case-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;gap:1rem;}
+.case-company{font-size:11px;font-weight:500;letter-spacing:.5px;color:var(--text2);margin-bottom:.25rem;}
+.case-year{font-size:10px;color:var(--text2);padding:3px 8px;border:.5px solid var(--border);border-radius:2px;white-space:nowrap;}
+.case-title{font-size:14px;font-weight:500;line-height:1.35;}
+.case-body{font-size:12px;color:var(--text2);line-height:1.75;margin-bottom:1.1rem;}
+.case-results{display:flex;gap:.7rem;flex-wrap:wrap;}
+.case-result{background:var(--bg2);border-radius:3px;padding:.5rem .9rem;text-align:center;}
+.case-result-n{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--red);line-height:1;}
+.case-result-l{font-size:10px;color:var(--text2);}
+
+/* MARKETS */
+.mkts{padding:2.2rem 2.5rem;border-top:.5px solid var(--border);}
+.mkts-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:1rem;}
+.mkt{font-size:11px;padding:5px 12px;border:.5px solid var(--border2);border-radius:2px;color:var(--text2);transition:all .2s;cursor:default;}
+.mkt:hover,.mkt.hot{border-color:var(--red);color:var(--red);}
+
+/* ABOUT */
+.about-strip{display:flex;align-items:stretch;border-top:.5px solid var(--border);}
+.about-text{flex:1;padding:2.5rem;}
+.about-award{width:200px;background:var(--red);padding:2rem 1.5rem;display:flex;flex-direction:column;justify-content:center;}
+.award-l{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.4rem;}
+.award-n{font-family:'Bebas Neue',sans-serif;font-size:18px;color:#fff;line-height:1.2;}
+.award-o{font-size:11px;color:rgba(255,255,255,.8);margin-top:.4rem;line-height:1.4;}
+.lang-tag{font-size:10px;padding:3px 9px;border:.5px solid var(--border2);border-radius:2px;color:var(--text2);}
+
+/* FORM */
+.form-sec{padding:2.8rem 2.5rem;border-top:4px solid var(--text);}
+.form-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:1.6rem;}
+.form-intro p{font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.f-contact{font-size:12px;color:var(--text2);display:flex;flex-direction:column;gap:7px;margin-top:1.2rem;}
+.f-contact span{display:flex;align-items:center;gap:7px;}
+.f-form{display:flex;flex-direction:column;gap:.85rem;}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
+.f-form input,.f-form select,.f-form textarea{
+  width:100%;font-family:'DM Sans',sans-serif;font-size:13px;
+  padding:10px 12px;background:var(--bg);color:var(--text);
+  border:.5px solid var(--border2);border-radius:3px;outline:none;transition:border .2s;
+}
+.f-form input:focus,.f-form select:focus,.f-form textarea:focus{border-color:var(--red);}
+.f-form textarea{resize:vertical;min-height:88px;}
+.f-form select{appearance:none;-webkit-appearance:none;cursor:pointer;}
+.f-submit{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--red);color:#fff;font-family:'DM Sans',sans-serif;
+  font-size:13px;font-weight:500;padding:12px 24px;border-radius:3px;
+  cursor:pointer;border:none;transition:opacity .2s;width:100%;
+}
+.f-submit:hover{opacity:.88;}
+.f-note{font-size:11px;color:var(--text2);text-align:center;margin-top:.4rem;}
+
+/* FOOTER */
+.footer{padding:1.1rem 2.5rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.footer span{font-size:11px;color:var(--text2);}
+
+/* ANIMATIONS */
+.hero-tag,.hero-h1,.hero-p,.hero-cta,.hero-stats{opacity:0;transform:translateY(16px);animation:fu .6s ease forwards;}
+.hero-tag{animation-delay:.1s;}.hero-h1{animation-delay:.22s;}.hero-p{animation-delay:.34s;}.hero-cta{animation-delay:.46s;}.hero-stats{animation-delay:.56s;}
+@keyframes fu{to{opacity:1;transform:translateY(0);}}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .industry-grid{grid-template-columns:repeat(2,1fr);}
+  .srv-grid{grid-template-columns:repeat(2,1fr);}
+  .voucher-grid,.tender-layout{grid-template-columns:1fr;}
+  .form-layout{grid-template-columns:1fr;}
+  .expertise-strip{grid-template-columns:repeat(2,1fr);}
+  .hero-stats{display:none;}
+  .hero-h1{font-size:64px;}
+}
+@media(max-width:600px){
+  .nav-links{display:none;}
+  .industry-grid,.srv-grid{grid-template-columns:1fr;}
+  .hero-h1{font-size:50px;}
+  .about-strip{flex-direction:column;}
+  .about-award{width:100%;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-logo">Achille Rumolo</span>
+  <ul class="nav-links">
+    <li><a href="#industry">Expertise</a></li>
+    <li><a href="#services">Servizi</a></li>
+    <li><a href="#tender">Gare &amp; Bandi</a></li>
+    <li><a href="#voucher">Voucher</a></li>
+    <li><a href="#cases">Case Studies</a></li>
+    <li><a href="#contact">Contatti</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="h-blob1"></div><div class="h-blob2"></div><div class="h-bar"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Export &amp; International Business Development · Power &amp; Energy</span>
+    <h1 class="hero-h1">Cresci<br>oltre<br><em>i confini.</em></h1>
+    <p class="hero-p">Sviluppo commerciale internazionale, gestione gare d'appalto B2B su mercati regolati e costruzione di reti distributive in oltre 30 paesi. Dal settore energetico a quello manifatturiero: accompagno le imprese italiane verso nuovi mercati con metodo, lingue e dati.</p>
+    <a class="hero-cta" href="#contact">
+      <i class="ti ti-calendar" aria-hidden="true"></i> Fissa una call gratuita
+    </a>
+  </div>
+  <div class="hero-stats">
+    <div><div class="stat-n">30+</div><div class="stat-l">Paesi operativi</div></div>
+    <div><div class="stat-n">8+</div><div class="stat-l">Anni di export</div></div>
+    <div><div class="stat-n">5</div><div class="stat-l">Lingue</div></div>
+  </div>
+</section>
+
+<!-- EXPERTISE STRIP -->
+<div class="expertise-strip">
+  <div class="exp-item">
+    <div class="exp-num">TSO/DSO</div>
+    <div class="exp-label">Gare con operatori di trasmissione e distribuzione europei e LATAM</div>
+  </div>
+  <div class="exp-item">
+    <div class="exp-num">EPC</div>
+    <div class="exp-label">Fornitura a general contractor e sviluppatori di rinnovabili</div>
+  </div>
+  <div class="exp-item">
+    <div class="exp-num">IFI</div>
+    <div class="exp-label">Bandi finanziati da AFD, BERD, BEI, Banca Mondiale</div>
+  </div>
+  <div class="exp-item">
+    <div class="exp-num">TEM</div>
+    <div class="exp-label">Temporary Export Management per PMI manifatturiere italiane</div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span>Power Transformers</span><span class="dot">✦</span>
+    <span>Tender Management</span><span class="dot">✦</span>
+    <span>Distribution Transformers</span><span class="dot">✦</span>
+    <span>Qualification Systems</span><span class="dot">✦</span>
+    <span>Export Management</span><span class="dot">✦</span>
+    <span>B2B Sales</span><span class="dot">✦</span>
+    <span>Market Intelligence</span><span class="dot">✦</span>
+    <span>Voucher Internazionalizzazione</span><span class="dot">✦</span>
+    <span>Industria 4.0</span><span class="dot">✦</span>
+    <span>Go-to-Market Strategy</span><span class="dot">✦</span>
+    <span>IFI Procurement</span><span class="dot">✦</span>
+    <span>Power Transformers</span><span class="dot">✦</span>
+    <span>Tender Management</span><span class="dot">✦</span>
+    <span>Distribution Transformers</span><span class="dot">✦</span>
+    <span>Qualification Systems</span><span class="dot">✦</span>
+    <span>Export Management</span><span class="dot">✦</span>
+    <span>B2B Sales</span><span class="dot">✦</span>
+    <span>Market Intelligence</span><span class="dot">✦</span>
+    <span>Voucher Internazionalizzazione</span><span class="dot">✦</span>
+    <span>Industria 4.0</span><span class="dot">✦</span>
+    <span>Go-to-Market Strategy</span><span class="dot">✦</span>
+    <span>IFI Procurement</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- INDUSTRY VERTICALS -->
+<section class="sec" id="industry">
+  <p class="sec-label">Specializzazioni verticali</p>
+  <h2 class="sec-title">Settori &amp; Merceologie</h2>
+  <div class="industry-grid">
+    <div class="ind-card">
+      <div class="ind-icon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
+      <div class="ind-name">Energia &amp; T&amp;D</div>
+      <div class="ind-cats">
+        <span class="ind-cat hot">Trasformatori HV/MV</span>
+        <span class="ind-cat hot">Autotrasformatori AT</span>
+        <span class="ind-cat hot">Trasformatori MT/BT</span>
+        <span class="ind-cat hot">Gruppi elettrogeni</span>
+        <span class="ind-cat">TSO / DSO</span>
+        <span class="ind-cat">Rinnovabili &amp; BESS</span>
+        <span class="ind-cat">3–4.500 kVA</span>
+        <span class="ind-cat blue">IFI procurement</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon"><i class="ti ti-tool" aria-hidden="true"></i></div>
+      <div class="ind-name">Metalmeccanico</div>
+      <div class="ind-cats">
+        <span class="ind-cat hot">Componentistica</span>
+        <span class="ind-cat hot">Macchine industriali</span>
+        <span class="ind-cat">Automazione</span>
+        <span class="ind-cat">Pressofusione</span>
+        <span class="ind-cat">Trattamenti superficiali</span>
+        <span class="ind-cat">OEM supply chain</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon"><i class="ti ti-salad" aria-hidden="true"></i></div>
+      <div class="ind-name">Food &amp; Beverage</div>
+      <div class="ind-cats">
+        <span class="ind-cat hot">Vino &amp; spirits</span>
+        <span class="ind-cat hot">Olio EVO</span>
+        <span class="ind-cat">Conserve &amp; salumi</span>
+        <span class="ind-cat">Pasta &amp; cereali</span>
+        <span class="ind-cat">GDO &amp; HoReCa</span>
+        <span class="ind-cat">Private label</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon"><i class="ti ti-car" aria-hidden="true"></i></div>
+      <div class="ind-name">Automotive</div>
+      <div class="ind-cats">
+        <span class="ind-cat hot">Veicoli commerciali</span>
+        <span class="ind-cat">Fleet management B2B</span>
+        <span class="ind-cat">Ricambi OEM</span>
+        <span class="ind-cat">Truck spare parts</span>
+        <span class="ind-cat">Assicurazioni fleet</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon"><i class="ti ti-device-laptop" aria-hidden="true"></i></div>
+      <div class="ind-name">Elettronica &amp; ICT</div>
+      <div class="ind-cats">
+        <span class="ind-cat hot">Wearable devices</span>
+        <span class="ind-cat">E-commerce B2B</span>
+        <span class="ind-cat">SaaS &amp; software</span>
+        <span class="ind-cat">IoT industriale</span>
+        <span class="ind-cat">Oleodynamics</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon"><i class="ti ti-building" aria-hidden="true"></i></div>
+      <div class="ind-name">Edilizia &amp; Arredamento</div>
+      <div class="ind-cats">
+        <span class="ind-cat">Materiali da costruzione</span>
+        <span class="ind-cat">Contract &amp; hospitality</span>
+        <span class="ind-cat">Pavimenti &amp; rivestimenti</span>
+        <span class="ind-cat">Interior design B2B</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon"><i class="ti ti-shirt" aria-hidden="true"></i></div>
+      <div class="ind-name">Tessile &amp; Personal Care</div>
+      <div class="ind-cats">
+        <span class="ind-cat">Abbigliamento tecnico</span>
+        <span class="ind-cat">Private label</span>
+        <span class="ind-cat">Cosmesi professionale</span>
+        <span class="ind-cat">Distribuzione GDO</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon"><i class="ti ti-pill" aria-hidden="true"></i></div>
+      <div class="ind-name">Chimico-farmaceutico</div>
+      <div class="ind-cats">
+        <span class="ind-cat">API &amp; materie prime</span>
+        <span class="ind-cat">Dispositivi medici</span>
+        <span class="ind-cat">Nutraceutica</span>
+        <span class="ind-cat">Reg. CE / FDA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec divider" id="services">
+  <p class="sec-label">Cosa faccio</p>
+  <h2 class="sec-title">Servizi</h2>
+  <div class="srv-grid">
+    <div class="srv-card">
+      <div class="srv-num">01</div>
+      <div class="srv-name">Export &amp; Area Sales Management</div>
+      <div class="srv-desc">Sviluppo e gestione completa di portafogli commerciali esteri: costruzione reti agenti e distributori, qualifica partner locali, negoziazione contratti di fornitura e distribuzione. Presidio diretto di mercati LATAM, Iberia, Balcani/CEE e Nord Europa.</div>
+      <div class="srv-tags"><span class="srv-tag">Agenti &amp; distributori</span><span class="srv-tag">Contrattualistica</span><span class="srv-tag">KPI &amp; reporting</span><span class="srv-tag accent">Getra / settore energia</span></div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-num">02</div>
+      <div class="srv-name">Tender Intelligence &amp; Bid Management</div>
+      <div class="srv-desc">Monitoraggio sistematico di portali di gara internazionali (TED, Doffin, Mercell, SEACE, PNCP, Compranet e oltre 20 fonti), analisi documentale con metodologia strutturata, redazione offerte tecniche e commerciali, coordinamento dei dipartimenti interni per la compilazione dei questionari.</div>
+      <div class="srv-tags"><span class="srv-tag accent">TSO/DSO/EPC</span><span class="srv-tag">IFI financing</span><span class="srv-tag">Griglia Chiomenti</span><span class="srv-tag">Due diligence</span></div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-num">03</div>
+      <div class="srv-name">Qualification Systems</div>
+      <div class="srv-desc">Gestione delle candidature ai sistemi di qualificazione fornitori di utility europee (TenneT, TAURON, PSE, Enedis e altri): raccolta documentale, compilazione SMQ, coordinamento uffici tecnici, amministrativi e di qualità per rispettare i requisiti di ciascun operatore.</div>
+      <div class="srv-tags"><span class="srv-tag">Dir. 2014/25/UE</span><span class="srv-tag">SMQ &amp; SQ</span><span class="srv-tag">Audit readiness</span></div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-num">04</div>
+      <div class="srv-name">Market Intelligence &amp; Go-to-Market</div>
+      <div class="srv-desc">Analisi mercati target, mappatura competitor attivi (inclusi player asiatici come Hyosung, Hitachi Energy, TBEA), sizing della domanda e identificazione canali distributivi ottimali. Piano commerciale esecutivo con pricing internazionale e strategia di ingresso.</div>
+      <div class="srv-tags"><span class="srv-tag">Desk &amp; field research</span><span class="srv-tag">Competitive intel</span><span class="srv-tag">Pricing internazionale</span></div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-num">05</div>
+      <div class="srv-name">Temporary Export Management</div>
+      <div class="srv-desc">Figura esterna di Export Manager per PMI manifatturiere italiane: sviluppo rete vendite estera, consolidamento partnership internazionali, gestione brand sui mercati target e costruzione pipeline commerciale. Operativo da subito, senza oneri da assunzione.</div>
+      <div class="srv-tags"><span class="srv-tag accent">Disponibile immediatamente</span><span class="srv-tag">PMI manifatturiere</span><span class="srv-tag">Multi-settore</span></div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-num">06</div>
+      <div class="srv-name">Digital Export &amp; CRM</div>
+      <div class="srv-desc">Digitalizzazione processi commerciali: implementazione CRM, pipeline B2B internazionale, campagne digitali multilingue per acquisizione clienti esteri, lead generation e automazione workflow di scouting (briefing giornaliero, GitHub Actions, Apify).</div>
+      <div class="srv-tags"><span class="srv-tag">CRM &amp; automazione</span><span class="srv-tag">Lead gen B2B</span><span class="srv-tag">Social &amp; content</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TENDER SECTION -->
+<section class="sec divider" id="tender">
+  <p class="sec-label">Specializzazione verticale</p>
+  <h2 class="sec-title">Gare d'Appalto &amp; Opportunità di Business</h2>
+  <p style="font-size:13px;color:var(--text2);max-width:640px;line-height:1.8;margin-bottom:.5rem;">Supporto end-to-end nella gestione di gare internazionali su mercati regolati — da TSO e DSO europei fino a bandi IFI in LATAM e Nord Africa. Il metodo si basa su un processo strutturato in 5 fasi: intelligence → analisi → qualifica → offerta → follow-up.</p>
+  <div class="tender-layout">
+    <div class="tender-card featured">
+      <span class="tender-badge tb-red">Core Service</span>
+      <div class="tender-title">Gestione Completa Bando (End-to-End)</div>
+      <div class="tender-desc">Dal monitoraggio del portale alla consegna del plico: analisi di ammissibilità, due diligence con metodologia strutturata (Griglia Chiomenti), redazione offerta tecnica e commerciale, coordinamento interno dei dipartimenti ingegneria, qualità, logistica, amministrazione e finanza.</div>
+      <ul class="tender-list">
+        <li>Analisi documentale bando: capitolato amministrativo vs tecnico</li>
+        <li>Compliance checklist per ogni requisito del bando</li>
+        <li>Redazione sezioni standard (azienda, capacità finanziaria, referenze)</li>
+        <li>Coordinamento uffici per sezioni tecniche proprietarie</li>
+        <li>Revisione pre-submission e gestione addendum</li>
+      </ul>
+    </div>
+    <div class="tender-card">
+      <span class="tender-badge tb-blue">Portali Monitorati</span>
+      <div class="tender-title">Scouting &amp; Tender Intelligence</div>
+      <div class="tender-desc">Monitoraggio quotidiano automatizzato di 25+ portali internazionali con briefing giornaliero via email. Copertura: Europa, LATAM, Nord Africa e Medio Oriente.</div>
+      <ul class="tender-list">
+        <li>TED, Doffin, Mercell, Find a Tender (UK)</li>
+        <li>SEACE (PE), PNCP/ANEEL (BR), Compranet (MX)</li>
+        <li>Portali fornitori: TAURON, Enedis, PSE, HOPS, Masen</li>
+        <li>Marchés Publics (MA), ANDE (PY), EPEN (AR)</li>
+        <li>Report settimanale con analisi priorità e scadenze</li>
+      </ul>
+    </div>
+    <div class="tender-card">
+      <span class="tender-badge tb-gray">Finanziatori IFI</span>
+      <div class="tender-title">Bandi Finanziati da Istituzioni Internazionali</div>
+      <div class="tender-desc">Esperienza diretta su gare finanziate da AFD (Agence Française de Développement), BERD, BEI e Banca Mondiale. Conoscenza dei requisiti specifici di procurement, origini ammissibili e formato offerta.</div>
+      <ul class="tender-list">
+        <li>AFD: procurement rules, BPO e IFB standard</li>
+        <li>BERD: verifica eligibility e paese di origine</li>
+        <li>Banca Mondiale / IDB: procedure SBD e RFP</li>
+        <li>Preparazione sezione financial capacity (bilanci certificati)</li>
+      </ul>
+    </div>
+    <div class="tender-card">
+      <span class="tender-badge tb-gray">Qualificazione Fornitori</span>
+      <div class="tender-title">Sistemi di Qualificazione Utility Europee</div>
+      <div class="tender-desc">Gestione candidature ai sistemi di qualificazione di utility e TSO/DSO europei, soggetti alla Direttiva 2014/25/UE. Esperienza diretta con operatori di distribuzione e trasmissione in Nord Europa e Centro-Europa.</div>
+      <ul class="tender-list">
+        <li>Utility nordeuropee: sistemi di qualifica per trasformatori di distribuzione 50–1.000 kVA</li>
+        <li>TenneT (NL/DE): sistema di qualifica Mercell</li>
+        <li>Mappatura requisiti ESG, H&amp;S, qualità e finanziari</li>
+        <li>Coordinamento questionari multi-dipartimento</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- VOUCHER -->
+<section class="voucher-sec" id="voucher">
+  <p class="sec-label">Agevolazioni &amp; finanziamenti</p>
+  <h2 class="sec-title" style="margin-bottom:.5rem;">Voucher Internazionalizzazione<br>&amp; Industria 4.0</h2>
+  <p style="font-size:13px;color:var(--text2);max-width:640px;line-height:1.8;">Supporto completo nell'accesso agli strumenti agevolativi nazionali ed europei per finanziare la strategia di export e la digitalizzazione dei processi produttivi e commerciali.</p>
+  <div class="voucher-grid">
+    <div class="voucher-card">
+      <span class="voucher-badge badge-gov">MISE / ICE</span>
+      <div class="voucher-title">Voucher Internazionalizzazione PMI</div>
+      <div class="voucher-desc">Contributi a fondo perduto per PMI italiane che intendono sviluppare nuovi mercati esteri. Supporto dalla domanda alla rendicontazione finale.</div>
+      <ul class="voucher-list">
+        <li>Analisi di ammissibilità e pre-screening azienda</li>
+        <li>Redazione del piano di internazionalizzazione</li>
+        <li>Gestione pratica MISE / Simest / ICE Agenzia</li>
+        <li>Rendicontazione spese e follow-up erogazione</li>
+      </ul>
+    </div>
+    <div class="voucher-card">
+      <span class="voucher-badge badge-eu">UE — HORIZON / COSME</span>
+      <div class="voucher-title">Programmi Europei Export</div>
+      <div class="voucher-desc">Accesso ai programmi europei di supporto all'internazionalizzazione: COSME, Enterprise Europe Network e strumenti Horizon per l'innovazione sui mercati esteri.</div>
+      <ul class="voucher-list">
+        <li>Identificazione del bando più adatto al profilo aziendale</li>
+        <li>Partnership con EEN e camere di commercio estere</li>
+        <li>Supporto nella costruzione di consorzi internazionali</li>
+        <li>Gestione documentazione e reporting UE</li>
+      </ul>
+    </div>
+    <div class="voucher-card">
+      <span class="voucher-badge badge-gov">MIMIT / Regioni</span>
+      <div class="voucher-title">Transizione 4.0 &amp; Digitale</div>
+      <div class="voucher-desc">Credito d'imposta e contributi per investimenti in tecnologie abilitanti Industria 4.0: automazione, IoT, CRM/ERP avanzati e integrazione digitale dei processi export.</div>
+      <ul class="voucher-list">
+        <li>Assessment readiness 4.0 e mappatura investimenti</li>
+        <li>Credito d'imposta beni strumentali 4.0</li>
+        <li>Digitalizzazione CRM, ERP e supply chain</li>
+        <li>Consulenza su bandi regionali complementari</li>
+      </ul>
+    </div>
+    <div class="voucher-card">
+      <span class="voucher-badge badge-gov">SACE / SIMEST</span>
+      <div class="voucher-title">Finanziamenti SIMEST &amp; SACE</div>
+      <div class="voucher-desc">Accesso agli strumenti di Cassa Depositi e Prestiti per finanziare l'espansione internazionale: finanziamenti agevolati, garanzie e assicurazione del credito export.</div>
+      <ul class="voucher-list">
+        <li>Fondo 394 SIMEST: finanziamento fiere e promozione</li>
+        <li>Fondo SIMEST per e-commerce internazionale</li>
+        <li>Garanzie SACE per contratti export</li>
+        <li>Assicurazione crediti su acquirenti esteri</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="sec" id="cases">
+  <p class="sec-label">Progetti &amp; risultati</p>
+  <h2 class="sec-title">Case Studies</h2>
+  <div class="cases-tabs" id="caseTabs"></div>
+  <div id="casePanels"></div>
+</section>
+
+<!-- MARKETS -->
+<section class="mkts">
+  <p class="sec-label">Dove opero</p>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:1px;">Mercati</h2>
+  <div class="mkts-row">
+    <span class="mkt hot">Balcani / CEE</span>
+    <span class="mkt hot">Penisola Iberica</span>
+    <span class="mkt hot">LATAM</span>
+    <span class="mkt hot">Nord Europa</span>
+    <span class="mkt hot">Nord Africa</span>
+    <span class="mkt">DACH</span>
+    <span class="mkt">Benelux</span>
+    <span class="mkt">Francia</span>
+    <span class="mkt">Scandinavia</span>
+    <span class="mkt">Polonia</span>
+    <span class="mkt">Brasile</span>
+    <span class="mkt">Messico</span>
+    <span class="mkt">Argentina</span>
+    <span class="mkt">Cile</span>
+    <span class="mkt">Perù</span>
+    <span class="mkt">Algeria</span>
+    <span class="mkt">Marocco</span>
+    <span class="mkt">Tunisia</span>
+    <span class="mkt">Emirati Arabi</span>
+    <span class="mkt">Montenegro</span>
+    <span class="mkt">Giappone</span>
+    <span class="mkt">Cina</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip">
+  <div class="about-text">
+    <p class="sec-label">Chi sono</p>
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:1px;margin-bottom:1rem;">Achille Rumolo</p>
+    <p style="font-size:13px;color:var(--text2);line-height:1.85;max-width:520px;">Area Sales Manager nel settore energia (trasformatori HV/MV e MT/BT) con esperienza diretta su gare TSO/DSO, sistemi di qualificazione europei e procurement IFI. In parallelo, attività di consulenza freelance per PMI manifatturiere italiane che vogliono internazionalizzarsi. Background: Agenzia ICE Bruxelles, Camera di Commercio Italiana in Cile, Tinexta Innovation Hub. Lingue: italiano, inglese, spagnolo (C2), tedesco (C1), francese (B1).</p>
+    <div style="margin-top:1.1rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+      <span class="lang-tag">IT Madrelingua</span>
+      <span class="lang-tag">EN C2</span>
+      <span class="lang-tag">ES C2</span>
+      <span class="lang-tag">DE C1</span>
+      <span class="lang-tag">FR B1</span>
+    </div>
+  </div>
+  <div class="about-award">
+    <div class="award-l">Premio 2026</div>
+    <div class="award-n">Imprese &amp; Talenti®</div>
+    <div class="award-o">Harvard Business Review Italia · Fiera del Levante, Bari</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="form-sec" id="contact">
+  <p class="sec-label">Prenota una call</p>
+  <h2 class="sec-title">Parliamo di <em style="color:var(--red);font-style:normal;">business.</em></h2>
+  <div class="form-layout">
+    <div class="form-intro">
+      <p>Hai un bando da gestire, vuoi esplorare un nuovo mercato o cerchi supporto per la qualificazione presso un'utility europea? Scrivimi: rispondo entro 24 ore e organizziamo una call conoscitiva gratuita.</p>
+      <div class="f-contact">
+        <span><i class="ti ti-mail" aria-hidden="true"></i> achillerumolo@gmail.com</span>
+        <span><i class="ti ti-phone" aria-hidden="true"></i> +39 388 758 6031</span>
+        <span><i class="ti ti-map-pin" aria-hidden="true"></i> Campania, Italia — disponibile ovunque</span>
+        <span><i class="ti ti-plane" aria-hidden="true"></i> Disponibile immediatamente</span>
+      </div>
+    </div>
+    <div>
+      <form class="f-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="f-row">
+          <input type="text" name="nome" placeholder="Nome *" required>
+          <input type="text" name="azienda" placeholder="Azienda">
+        </div>
+        <input type="email" name="email" placeholder="Email *" required>
+        <input type="tel" name="telefono" placeholder="Telefono">
+        <select name="servizio" required>
+          <option value="" disabled selected>Tipo di richiesta *</option>
+          <option>Gestione Bando / Gara d'Appalto</option>
+          <option>Tender Intelligence &amp; Scouting</option>
+          <option>Qualificazione Fornitori (Utility EU)</option>
+          <option>Export Management / TEM</option>
+          <option>Market Intelligence &amp; Go-to-Market</option>
+          <option>CRM &amp; Sales Operations</option>
+          <option>Voucher Internazionalizzazione</option>
+          <option>Industria 4.0 / Transizione digitale</option>
+          <option>Altro</option>
+        </select>
+        <select name="mercato">
+          <option value="" disabled selected>Mercato di interesse</option>
+          <option>Balcani / CEE</option>
+          <option>Penisola Iberica</option>
+          <option>Nord Europa / Scandinavia</option>
+          <option>DACH</option>
+          <option>Benelux</option>
+          <option>LATAM</option>
+          <option>Nord Africa / MENA</option>
+          <option>Più mercati</option>
+        </select>
+        <textarea name="messaggio" placeholder="Descrivi brevemente il tuo progetto o la tua esigenza..."></textarea>
+        <button type="submit" class="f-submit">
+          <i class="ti ti-send" aria-hidden="true"></i> Invia richiesta
+        </button>
+        <p class="f-note">Risposta garantita entro 24h · Primo colloquio gratuito</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© 2026 Achille Rumolo · Export Specialist &amp; International Business Developer</span>
+  <span>Campania, Italia</span>
+</footer>
+
+<script>
+const cases = [
+  {
+    tab:"Energia & T&D",
+    cards:[
+      {
+        company:"Settore energetico — Mercato Balcani",year:"2025–oggi",
+        title:"Gestione bid internazionale per fornitura apparecchiature AT a operatore di trasmissione",
+        body:"Gestione completa di una procedura di gara internazionale a doppia busta (offerta tecnica e offerta economica) per la fornitura di apparecchiature ad alta tensione a un operatore di trasmissione nei Balcani. Analisi documentale strutturata, produzione checklist di compliance, coordinamento delle sezioni H&S, finanziarie e tecniche con gli uffici interni. Bando finanziato da istituzione finanziaria internazionale.",
+        results:[{n:"IFI",l:"bando finanziato"},{n:"2-env",l:"procedura adottata"},{n:"100%",l:"requisiti coperti"}]
+      },
+      {
+        company:"Settore energetico — Mercato Nord Europa",year:"2025",
+        title:"Accesso a sistema di qualificazione fornitori di utility europea per trasformatori di distribuzione",
+        body:"Coordinamento della candidatura aziendale a un sistema di qualificazione di un grande operatore di distribuzione nordeuropeo per la fornitura di trasformatori MT/BT. Compilazione del questionario fornitore in inglese, raccolta documentazione tecnica, finanziaria, ESG e di qualità, con coinvolgimento di tutti i dipartimenti aziendali rilevanti.",
+        results:[{n:"4+",l:"utility coperte"},{n:"MT/BT",l:"categoria prodotto"},{n:"Multi-dept",l:"coordinamento"}]
+      },
+      {
+        company:"Settore energetico — Mercato Nord Europa",year:"2025",
+        title:"Offerta tecnico-commerciale per trasformatore elevatore a servizio di impianto storage",
+        body:"Sviluppo in due round di un'offerta tecnico-commerciale per un trasformatore di grande potenza destinato a un impianto di accumulo energetico (BESS). Attività incluse: feasibility study, call tecnica con l'appaltatore EPC, riallineamento prezzi alle materie prime, revisione programma FAT e adattamento della documentazione di test.",
+        results:[{n:"2",l:"round offerta"},{n:"Grande",l:"potenza installata"},{n:"BESS",l:"applicazione"}]
+      },
+      {
+        company:"Settore energetico — Mercati MENA",year:"2024–2025",
+        title:"Sviluppo rete distributiva per apparecchiature di generazione industriale in Nord Africa e Medio Oriente",
+        body:"Costruzione da zero di una rete di distributori e agenti locali in tre paesi del Nord Africa e del Golfo per la commercializzazione di gruppi di generazione industriale e marino. Analisi di gare internazionali nel settore oil & gas e data center, redazione di offerte tecniche multilingue e implementazione di un CRM per la gestione della pipeline agenti.",
+        results:[{n:"3",l:"mercati attivati"},{n:"12+",l:"offerte B2B"},{n:"CRM",l:"pipeline costruita"}]
+      }
+    ]
+  },
+  {
+    tab:"Temporary Export",
+    cards:[
+      {
+        company:"Settore manifatturiero — Italia",year:"2023–2025",
+        title:"Temporary Export Management per portafoglio di PMI manifatturiere",
+        body:"Ruolo di Temporary Export Manager per un gruppo di PMI italiane nei settori manifatturiero, chimico e consumer goods. Attività: sviluppo delle reti di vendita estere, consolidamento di partnership internazionali, definizione ed esecuzione di strategie commerciali multilinguistiche, gestione del brand aziendale su mercati europei e nordafricani e costruzione di pipeline commerciali qualificate.",
+        results:[{n:"8+",l:"aziende seguite"},{n:"10+",l:"mercati attivati"},{n:"EU+AF",l:"aree coperte"}]
+      }
+    ]
+  },
+  {
+    tab:"LATAM",
+    cards:[
+      {
+        company:"Sviluppo istituzionale — America Latina",year:"2022",
+        title:"Promozione degli investimenti e sviluppo commerciale B2B su mercato sudamericano",
+        body:"Responsabilità dell'ufficio commerciale di un'istituzione bilaterale in America Latina. Analisi delle opportunità di investimento per imprese italiane, ricerca di mercato settoriale, posizionamento di prodotti made in Italy e organizzazione di missioni B2B nei settori agroalimentare, energia e manifatturiero.",
+        results:[{n:"20+",l:"incontri B2B"},{n:"3",l:"settori coperti"},{n:"IT-LATAM",l:"corridoio"}]
+      },
+      {
+        company:"Settore energetico — Mercato LATAM",year:"2025",
+        title:"Analisi contrattuale e sviluppo commerciale per forniture di trasformatori in Sud America",
+        body:"Due diligence contrattuale su una fornitura di trasformatori di distribuzione MT/BT per un operatore energetico in Sud America, con analisi delle normative di importazione e della fiscalità locale applicabile a Brasile, Argentina e Colombia. Coordinamento con il rappresentante locale per l'ingresso nel mercato brasiliano.",
+        results:[{n:"3",l:"paesi analizzati"},{n:"MT/BT",l:"categoria"},{n:"Fiscale",l:"analisi completata"}]
+      }
+    ]
+  },
+  {
+    tab:"Food & Beverage",
+    cards:[
+      {
+        company:"Promozione agroalimentare — Nord Europa",year:"2018",
+        title:"Sviluppo canali GDO e HoReCa per prodotti agroalimentari italiani in Nord Europa",
+        body:"Gestione della struttura vendite estera per produttori agroalimentari italiani nel mercato del Benelux e della Germania. Sviluppo di clienti nella grande distribuzione organizzata e nel canale HoReCa, organizzazione di spedizioni internazionali e partecipazione a fiere agroalimentari europee. Analisi parallela del mercato asiatico per l'export di prodotti vitivinicoli italiani.",
+        results:[{n:"15+",l:"buyer contattati"},{n:"3",l:"fiere coordinate"},{n:"3",l:"mercati coperti"}]
+      }
+    ]
+  },
+  {
+    tab:"Automotive",
+    cards:[
+      {
+        company:"Settore automotive — Italia meridionale",year:"2021",
+        title:"Sviluppo portafoglio clienti B2B e gestione fleet sales per produttore di veicoli commerciali",
+        body:"Consulenza commerciale B2B per la vendita di veicoli commerciali a clientela aziendale nell'Italia meridionale. Gestione di un portafoglio di clienti corporate con personalizzazione delle offerte fleet e pacchetti assicurativi integrati, con attività on-site presso le sedi dei clienti. Attività parallela di distribuzione di ricambi per marchi di veicoli industriali.",
+        results:[{n:"40+",l:"aziende gestite"},{n:"Fleet",l:"B2B sales"},{n:"Sud IT",l:"area operativa"}]
+      }
+    ]
+  },
+  {
+    tab:"ICT & Digital",
+    cards:[
+      {
+        company:"Consulenza export — Settore ICT",year:"2020",
+        title:"Consulenza export integrata e digital marketing per PMI tecnologiche",
+        body:"Consulenza integrata di export e marketing digitale per aziende partner nel settore elettronico e ICT. Gestione di campagne digitali internazionali, webinar B2B per l'acquisizione di lead esteri, presenza sui social media in più lingue e sviluppo di strategie di internazionalizzazione per startup e PMI innovative.",
+        results:[{n:"6",l:"aziende seguite"},{n:"4",l:"mercati europei"},{n:"Lead gen",l:"B2B digitale"}]
+      },
+      {
+        company:"Ricerca e sviluppo commerciale — Settore ICT",year:"2017–2018",
+        title:"Strategia go-to-market per dispositivi wearable in Europa e analisi mercato asiatico",
+        body:"Analisi del mercato europeo dei dispositivi wearable e definizione della strategia di distribuzione online e offline, con posizionamento competitivo e piano di comunicazione digitale multicanale. In parallelo, analisi del mercato di consumo asiatico per produttori italiani interessati ai canali e-commerce locali.",
+        results:[{n:"2",l:"mercati analizzati"},{n:"EU+ASIA",l:"aree target"},{n:"E-com",l:"canale primario"}]
+      }
+    ]
+  }
+];
+
+const tabsEl = document.getElementById('caseTabs');
+const panelsEl = document.getElementById('casePanels');
+
+cases.forEach((c,i)=>{
+  const tab=document.createElement('div');
+  tab.className='case-tab'+(i===0?' active':'');
+  tab.textContent=c.tab;
+  tab.onclick=()=>{
+    document.querySelectorAll('.case-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.cases-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-'+i).classList.add('active');
+  };
+  tabsEl.appendChild(tab);
+  const panel=document.createElement('div');
+  panel.className='cases-panel'+(i===0?' active':'');
+  panel.id='panel-'+i;
+  panel.innerHTML=c.cards.map(card=>`
+    <div class="case-card">
+      <div class="case-header">
+        <div>
+          <div class="case-company">${card.company}</div>
+          <div class="case-title">${card.title}</div>
+        </div>
+        <span class="case-year">${card.year}</span>
+      </div>
+      <div class="case-body">${card.body}</div>
+      <div class="case-results">
+        ${card.results.map(r=>`<div class="case-result"><div class="case-result-n">${r.n}</div><div class="case-result-l">${r.l}</div></div>`).join('')}
+      </div>
+    </div>
+  `).join('');
+  panelsEl.appendChild(panel);
+});
+
+function handleSubmit(e){
+  e.preventDefault();
+  const f=e.target;
+  const nome=f.nome.value.trim();
+  const email=f.email.value.trim();
+  const servizio=f.servizio.value;
+  if(!nome||!email||!servizio){alert('Compila i campi obbligatori: nome, email e tipo di richiesta.');return;}
+  const subject=encodeURIComponent(`[Sito Web] ${servizio} — ${nome}`);
+  const body=encodeURIComponent(
+    `Nome: ${nome}\nAzienda: ${f.azienda.value||'—'}\nEmail: ${email}\nTelefono: ${f.telefono.value||'—'}\nServizio: ${servizio}\nMercato: ${f.mercato.value||'—'}\n\n${f.messaggio.value}`
+  );
+  window.location.href=`mailto:achillerumolo@gmail.com?subject=${subject}&body=${body}`;
+}
+</script>
+</body>
+</html>
