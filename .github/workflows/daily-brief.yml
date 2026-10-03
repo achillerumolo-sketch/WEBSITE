@@ -1,0 +1,41 @@
+name: Tender Intelligence Daily Brief
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # ogni giorno alle 06:00 UTC
+  workflow_dispatch:        # per lanciarlo anche manualmente dal tab Actions
+
+jobs:
+  daily-brief:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # necessario per il push del brief nello step finale
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run daily brief pipeline
+        env:
+          # Il nome a sinistra è quello che daily-brief.js si aspetta (APIFY_API_TOKEN).
+          # A destra, secrets.APIFY_TOKEN presuppone che tu abbia chiamato così il
+          # secret in Settings → Secrets and variables → Actions. Se lo hai chiamato
+          # diversamente, aggiorna qui il nome dopo "secrets.".
+          APIFY_API_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node daily-brief.js
+
+      - name: Commit and push brief
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add daily-briefs/
+          git diff --staged --quiet || git commit -m "Brief $(date +%Y-%m-%d)"
+          git push

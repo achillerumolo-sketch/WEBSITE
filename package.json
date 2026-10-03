@@ -1,0 +1,19 @@
+{
+  "name": "transformer-tender-daily-brief",
+  "version": "1.0.0",
+  "description": "Monitoraggio quotidiano di tender per power/distribution transformer via Apify (web search) + Anthropic API (scoring/sintesi)",
+  "type": "module",
+  "main": "daily-brief.js",
+  "scripts": {
+    "start": "node daily-brief.js",
+    "test-config": "node -e \"import('./config.js').then(c => console.log(JSON.stringify(c.default, null, 2)))\""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "apify-client": "^2.9.0",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
